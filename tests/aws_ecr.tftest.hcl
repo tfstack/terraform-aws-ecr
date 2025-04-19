@@ -26,7 +26,6 @@ run "test_aws_ecr" {
     enable_scan_permissions       = false
     scan_access_arns              = []
     encryption_type               = "AES256"
-    region                        = "ap-southeast-2"
     tags = {
       Name = "test-ecr-repo-${run.setup_ecr.suffix}"
       Env  = "test"
