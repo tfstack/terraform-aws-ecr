@@ -1,3 +1,16 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.94.1"
+    }
+  }
+}
+
+provider "aws" {
+  region = "ap-southeast-2"
+}
+
 module "aws_ecr" {
   source = "../.."
 
@@ -21,7 +34,6 @@ module "aws_ecr" {
   enable_scan_permissions       = false
   scan_access_arns              = []
   encryption_type               = "AES256"
-  region                        = "ap-southeast-2"
   tags = {
     Name = "my-private-repo"
     Env  = "dev"
