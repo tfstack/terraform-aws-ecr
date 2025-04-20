@@ -11,5 +11,5 @@ permissions:
 
 jobs:
   terraform-tag-and-release:
-  if: ${{ github.event.workflow_run.conclusion == 'success' }}
-  uses: actionsforge/actions/.github/workflows/terraform-tag-and-release.yml@main
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: actionsforge/actions/.github/workflows/terraform-tag-and-release.yml@main
